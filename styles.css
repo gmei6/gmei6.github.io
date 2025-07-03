@@ -1,0 +1,156 @@
+﻿/*
+    styles.css
+    This stylesheet provides all the visual styling for the XML-to-Excel web tool.
+    It includes layout, color, table, button, and logo styles for a clean, modern look.
+*/
+
+body {
+    /* Set the main font, remove default margin/padding, set background and text color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #002147;
+    /*
+        Example debug border and flex centering (commented out)
+    */
+}
+
+.center {
+    /* Center text and add spacing below */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    /* Style for main and subheadings */
+    color: #002147;
+    border: 2px solid black;
+}
+
+p {
+    /* Style for paragraph text */
+    font-size: 1.2em;
+    color: #e32636;
+}
+
+#logo {
+    /* Center the logo, set max width and auto height for responsiveness */
+    display: block;
+    margin: 30px auto 10px auto;
+    max-width: 350px;
+    height: auto;
+}
+
+li {
+    /* Float navigation list items left for horizontal menu */
+    float: left;
+}
+
+li {
+    /* Add a right border to all nav items except the last */
+    border-right: 1px solid #bbb;
+}
+
+    li:last-child {
+        /* Remove right border from last nav item */
+        border-right: none;
+    }
+
+ul {
+    /* Remove default list style, set nav bar background, and handle overflow */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111;
+}
+
+li {
+    /* Float nav items left (repeated for clarity) */
+    float: left;
+}
+
+    li a {
+        /* Style nav links: white text, block display, padding, no underline */
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        /* Change the link color to #111 (black) on hover */
+        li a:hover {
+            /* Change nav link background on hover */
+            background-color: #777;
+        }
+
+.excel-table {
+    /* Center the output table, make it responsive */
+    margin: 30px auto 30px auto;
+    max-width: 95vw;
+    overflow-x: auto;
+}
+
+    .excel-table table {
+        /* Style the table: collapse borders, full width, light background */
+        border-collapse: collapse;
+        width: 100%;
+        background: #f8f8f8;
+    }
+
+    .excel-table th, .excel-table td {
+        /* Style table cells: border, padding, font size, left align */
+        border: 1px solid #888;
+        padding: 6px 10px;
+        text-align: left;
+        font-size: 1em;
+    }
+
+    .excel-table th {
+        /* Style table headers: dark blue background, white text, bold */
+        background: #002147;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .excel-table tr:nth-child(even) {
+        /* Alternate row background for readability */
+        background: #e6e6e6;
+    }
+
+    .excel-table tr:hover {
+        /* Highlight row on hover */
+        background: #d0e0f0;
+    }
+
+button#processButton:disabled {
+    /* Style for disabled process button */
+    background: #ccc;
+    color: #888;
+    cursor: not-allowed;
+}
+
+button#processButton {
+    /* Style for enabled process button */
+    background: #002147;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.2s;
+}
+
+    button#processButton:not(:disabled):hover {
+        /* Button hover effect when enabled */
+        background: #0055a5;
+    }
+
+input[type="file"] {
+    /* Add spacing above/below file input */
+    margin: 10px 0;
+}

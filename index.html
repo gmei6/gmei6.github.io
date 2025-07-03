@@ -1,0 +1,87 @@
+﻿<!--
+    index.html
+    This is the main HTML file for the XML-to-Excel web tool.
+    It provides a UI for uploading XML files, processing them, and displaying the extracted data in a table for easy Excel copy-paste.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Default HTML Page">
+    <meta name="author" content="Gary Mei">
+    <title>Search Page</title>
+
+    <!-- Link to the main stylesheet for page styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <!-- Company logo at the top of the page -->
+        <img src="https://www.firstcitizens.com/content/dam/firstcitizens/images/logos/fcb-logo-horiz-web-2020@2x.png.transform/image-scaled-2x-to-1x/image.20230612.png" alt="logo of FCB" id="logo" />
+
+
+
+        <div>
+            <!-- Navigation menu for different options/pages -->
+            <ul>
+                <li><a class="active" href="index.html">Credit Log</a></li>
+                <li><a href="currency-converter.html">Currency Converter</a></li>
+                <li><a href="custom-format.html">Custom Format</a></li>
+
+                <!--
+                    https://www.geeksforgeeks.org/currency-converter-in-javascript/
+
+                    https://www.searchapi.io/docs/google-finance
+                -->
+
+                <li><a href="option3.html">Option 3</a></li>
+                <li><a href="option4.html">Option 4</a></li>
+                <li style="float:right"><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Example title and instructions (can be customized) -->
+    <h1>Testing title</h1>
+    Filler text. Note: Top bar has zero functionality.
+
+    <!-- Main upload and process section -->
+    <h1 class="center">Upload Multiple XML Files</h1>
+
+
+
+    <div class="center">
+        <!-- File input for selecting multiple XML files -->
+        <input type="file" id="fileInput" multiple accept=".xml">
+        <!-- Button to trigger processing of selected files -->
+        <button id="processButton" disabled>Process Files</button>
+    </div>
+
+
+
+    <!-- Copy as TSV buttons -->
+    <div class="center" style="margin-top:10px;">
+
+        <!--
+            <button id="copyTSVWithHeader">Copy Table as TSV (with header)</button>
+        -->
+
+        <button id="copyTSVNoHeader">Copy Table as TSV (no header)</button>
+    </div>
+
+
+
+    <!-- Output area for the Excel-friendly table -->
+    <div id="output" class="excel-table"></div>
+
+
+
+    <!-- Example sidebar heading (can be customized) -->
+    <h2 class="center">Bottom or Side bar</h2>
+    This can be customized in the future
+
+    <!-- Main JavaScript file for all logic -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
